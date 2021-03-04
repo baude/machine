@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		903998F625F04DB70081C3E8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903998F525F04DB70081C3E8 /* main.swift */; };
+		903998FE25F04DCE0081C3E8 /* Virtualization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903998FD25F04DCE0081C3E8 /* Virtualization.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		903998F225F04DB70081C3E8 /* machine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = machine; sourceTree = BUILT_PRODUCTS_DIR; };
 		903998F525F04DB70081C3E8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		903998FD25F04DCE0081C3E8 /* Virtualization.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Virtualization.framework; path = System/Library/Frameworks/Virtualization.framework; sourceTree = SDKROOT; };
+		9039990125F187AC0081C3E8 /* machine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = machine.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				903998FE25F04DCE0081C3E8 /* Virtualization.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +47,7 @@
 			children = (
 				903998F425F04DB70081C3E8 /* machine */,
 				903998F325F04DB70081C3E8 /* Products */,
+				903998FC25F04DCE0081C3E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +62,18 @@
 		903998F425F04DB70081C3E8 /* machine */ = {
 			isa = PBXGroup;
 			children = (
+				9039990125F187AC0081C3E8 /* machine.entitlements */,
 				903998F525F04DB70081C3E8 /* main.swift */,
 			);
 			path = machine;
+			sourceTree = "<group>";
+		};
+		903998FC25F04DCE0081C3E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				903998FD25F04DCE0081C3E8 /* Virtualization.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +259,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -254,6 +269,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
