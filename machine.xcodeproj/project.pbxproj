@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9016853925F2C54A00DD1F7C /* SwiftTerm in Frameworks */ = {isa = PBXBuildFile; productRef = 9016853825F2C54A00DD1F7C /* SwiftTerm */; };
 		903998F625F04DB70081C3E8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903998F525F04DB70081C3E8 /* main.swift */; };
 		903998FE25F04DCE0081C3E8 /* Virtualization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903998FD25F04DCE0081C3E8 /* Virtualization.framework */; };
 /* End PBXBuildFile section */
@@ -35,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9016853925F2C54A00DD1F7C /* SwiftTerm in Frameworks */,
 				903998FE25F04DCE0081C3E8 /* Virtualization.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +94,9 @@
 			dependencies = (
 			);
 			name = machine;
+			packageProductDependencies = (
+				9016853825F2C54A00DD1F7C /* SwiftTerm */,
+			);
 			productName = machine;
 			productReference = 903998F225F04DB70081C3E8 /* machine */;
 			productType = "com.apple.product-type.tool";
@@ -119,6 +124,9 @@
 				Base,
 			);
 			mainGroup = 903998E925F04DB70081C3E8;
+			packageReferences = (
+				9016853725F2C54A00DD1F7C /* XCRemoteSwiftPackageReference "SwiftTerm" */,
+			);
 			productRefGroup = 903998F325F04DB70081C3E8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,6 +266,7 @@
 		903998FA25F04DB70081C3E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = machine/machine.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				MACOSX_DEPLOYMENT_TARGET = 11.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -268,6 +277,7 @@
 		903998FB25F04DB70081C3E8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = machine/machine.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				MACOSX_DEPLOYMENT_TARGET = 11.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -297,6 +307,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9016853725F2C54A00DD1F7C /* XCRemoteSwiftPackageReference "SwiftTerm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/migueldeicaza/SwiftTerm";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9016853825F2C54A00DD1F7C /* SwiftTerm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9016853725F2C54A00DD1F7C /* XCRemoteSwiftPackageReference "SwiftTerm" */;
+			productName = SwiftTerm;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 903998EA25F04DB70081C3E8 /* Project object */;
 }
